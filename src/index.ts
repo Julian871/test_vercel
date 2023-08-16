@@ -30,7 +30,6 @@ app.post('/products', (req: Request, res: Response) => {
     res.status(201).send(newProduct)
 })
 
-// find title 'tomato'
 app.get('/products/:id', (req: Request, res: Response) => {
     let product = products.find(p => p.id === +req.params.id)
     if(product) {
